@@ -54,7 +54,7 @@ function Home() {
     <div>
     <SearchBar />
     <Stack spacing={2} alignItems={'center'}>
-      <Typography style={{color: '#b3b3b3'}}>Page: {page}</Typography>
+      <Typography style={{color: '#b3b3b3'}}>Page: {page} of {Math.floor(totalCount / 10)}</Typography>
       <Pagination count={Math.floor(totalCount / 10)} page={page} onChange={handleChange} 
           renderItem={(item) => (
           <PaginationItem

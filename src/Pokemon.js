@@ -82,10 +82,13 @@ function Pokemon() {
                         <Typography variant="h5" style={{ color: '#b3b3b3', textTransform: 'uppercase', fontFamily: 'monospace'}}>{item.stat.name}</Typography>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                           <Box sx={{ width: '100%', mr: 1 }}>
-                            <LinearProgress variant="determinate" color="secondary" value={item.base_stat} style={{height: "20px"}} classes={{bar: 'backgroundColor: "#1db954"'}}/>
+                          {
+                            console.log(Math.ceil((item.base_stat * 100)/255))
+                          }
+                            <LinearProgress variant="determinate" color="secondary" value={Math.ceil((item.base_stat * 100)/255)} style={{height: "20px"}} classes={{bar: 'backgroundColor: "#1db954"'}}/>
                           </Box>
                           <Box sx={{ minWidth: 35 }}>
-                            <Typography variant="h5" style={{ color: '#1db954', fontFamily: 'monospace'}}>{item.base_stat}</Typography>
+                            <Typography variant="h5" style={{ color: '#1db954', fontFamily: 'monospace'}}>{Math.ceil((item.base_stat * 100)/255)}</Typography>
                           </Box>
                         </Box>
                         </>

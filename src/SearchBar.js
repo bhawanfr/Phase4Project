@@ -53,16 +53,13 @@ function SearchBar()
                 renderOption={(props, option) => {
                   return (
                     <span {...props} 
-                    // style={{ backgroundColor: '#535353', color: '#b3b3b3', textTransform: 'uppercase', marginTop: '0px', padding: '2%'}}
                     sx={{
-                    backgroundColor: '#535353',
-                    color: '#b3b3b3',
                     textTransform: 'uppercase',
                     marginTop: '0px',
                     padding: '2%',
                     '&:hover': {
-                      backgroundColor: '#f1f1f1', // Change the background color when hovered
-                      color: '#000000', // Change the text color when hovered
+                      backgroundColor: '#f1f1f1',
+                      color: '#000000',
                     },
                   }}
                     >
